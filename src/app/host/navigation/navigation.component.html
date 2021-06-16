@@ -1,0 +1,19 @@
+<div class="navigation">
+  <div class="logo">Tahoot</div>
+  <div>
+    <button class="user-profile" [matMenuTriggerFor]="belowMenu">
+      <i class="fas fa-user fa-1g"></i>
+    </button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <mat-list>
+        John Gyamfi Doe
+      </mat-list>
+      <!--Move inline style later-->
+    <button style="text-align: center; margin-top: 5px; background: rgba(0,0,0,0.1);" class="log-out" >Logout</button>
+    </mat-menu>
+  </div>
+</div>
+
+<!-- (click)="signOut()" -->
+<!-- (click)="slideTrigger()" -->
+<!-- (click)="snav.toggle()" -->

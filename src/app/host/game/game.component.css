@@ -1,0 +1,133 @@
+.game-container {
+    width: 100%;
+    height: 100%;
+    background-color: #e3edf7;
+}
+
+/* .back-button {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	margin: 0px 0px 0px 0px;
+	height: 40px;
+	width: 40px;
+} */
+
+.top-header {
+    width: 100%;
+    height: 50%;
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+}
+
+.game-pin-host-name {
+    justify-content: center;
+}
+
+mat-toolbar-row h1 {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.game-details-container {
+    width: auto;
+    height: 81vh;
+    background-color: #e3edf7;
+}
+
+.game-details {
+    width: 100%;
+    height: 25%;
+    display: inline-flex;
+    align-items: center;
+}
+.player-count, .app-name, .start-game-button {
+    height: 100%;
+}
+
+.app-name, .start-game-button {
+    margin: 0px 0px 0px 35%;
+}
+
+.player-count {
+    margin: 30px 0px 0px 1%;
+    line-height: 250%;
+}
+
+.player-count p {
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+.app-name h1 {
+    width: auto; /* 235px */
+  height: auto; /* 36px */
+  overflow: visible;
+  white-space: pre;
+  letter-spacing: 0px;
+  line-height: 1.2;
+  font-weight: 700;
+  font-style: bold;
+  font-family: "Poppins", serif;
+  font-size: 20px;
+  color: #444444;
+  text-align:justify;
+}
+
+.start-game-button button, .app-name h1, .player-count p {
+    margin: 20% 0px 0px 0px;
+}
+
+.gamers-names {
+    min-height: 300px;
+    margin: 0px 10%;
+    padding: 2rem;
+    box-shadow: inset 5px 9px 21px -1px rgba(0, 0, 0, 0.22), inset -10px -8px 25px -1px rgba(255, 255, 255, 0.91);
+    background-color: #e3edf7;
+    overflow: visible;
+    border-radius: 28px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: auto;
+}
+
+.names{
+    font-weight: 500;
+    font-size: 20px;
+    vertical-align: 100px;
+}
+
+.page-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10%;
+    margin-top: 2rem;
+}
+
+.page-action-button{
+    width: 100px;
+    height: 50px;
+    box-shadow: 5px 9px 10px -1px rgba(0, 0, 0, 0.39), -10px -8px 14px -1px rgba(255, 255, 255, 0.93);
+    background-color: #e3edf7;
+    overflow: visible;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.page-action-button:hover{
+    cursor: pointer;
+    color: var(--white);
+    background: var(--blue);
+}
+
+.page-action-button:active{
+    box-shadow: inset 5px 5px 1px 1px rgba(0,0,0,0.3), inset -1px -1px 3px 2px rgba(0, 0, 0, 0.3);
+    color: var(--text);
+    background: var(--white);
+}

@@ -1,0 +1,36 @@
+<div class="question-option" *ngIf="questionOption">
+  <div *ngIf="questionType === 'text'; else optionsTypeImage" class="d-flex align-items-center">
+    <button (click)="handleDeleteQuestionOption()" class="btn btn-sm text-secondary d-flex align-items-center">
+      <mat-icon>cancel</mat-icon>
+    </button>
+    <mat-form-field class="option-field" appearance="outline">
+      <input matInput [(ngModel)]="questionOption.optionText" (ngModelChange)="onOptionTextValueChange($event)"
+        type="text" name="option{{questionOption.id}}" id="{{questionOption.id}}" placeholder="question option"
+        required>
+    </mat-form-field>
+    <div class="form-check mx-2">
+      <input (change)="onOptionStatusValueChange()" class="form-check-input" type="radio" name="{{questionOption.id}}"
+        [checked]="questionOption.status">
+    </div>
+  </div>
+
+  <ng-template #optionsTypeImage>
+  <div class="d-flex align-items-center">
+    <div>
+      <button (click)="handleDeleteQuestionOption()" class="btn btn-sm text-secondary">
+        <mat-icon>cancel</mat-icon>
+      </button>
+        </div>
+
+    <div class="image-preview-container">
+        <img [src]="imageUrl" id="img-preview" class="question-image" />
+      </div>
+
+    <div class="file-upload-container">
+        <input style="display: none;" value="image url here" type="file" (change)="onFileSelected($event)" #fileInput id="image-upload" name="image" />
+        <button class="btn-sm upload-button" name="image" (click)="fileInput.click()" mat-stroked-button color="primary">Upload Image</button>
+      </div>
+
+    </div>
+  </ng-template>
+</div>

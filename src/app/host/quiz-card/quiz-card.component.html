@@ -1,0 +1,45 @@
+<div class="quiz-card">
+    <div class="quiz-name">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">person</mat-icon>
+        <span>Quiz Name</span>
+    </div>
+    <div class="quiz-info">
+        <span>Quiz Desc...</span>
+    </div>
+    <div class="quiz-pin">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">fiber_pin</mat-icon>
+
+        <div cdkCopyToClipboard="{{pin}}" title="Click to copy" (click)="openSnackBar('&#10004; Copied to clipboard')">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" >copy_all</mat-icon>
+            <span>{{pin}} </span> 
+
+        </div>
+    </div>
+
+
+
+
+    <div class="quiz-action">
+        <mat-icon aria-hidden="false" title="view questions" (click)="viewQuizQuestions()" aria-label="Example home icon">visibility</mat-icon>
+        <mat-icon aria-hidden="false" title="play" (click)="startQuiz()" aria-label="Example home icon">play_arrow</mat-icon>
+        <mat-icon aria-hidden="false" title="delete card" (click)="deleteQuiz()" aria-label="Example home icon">delete</mat-icon>
+    </div>
+</div>
+<!-- <mat-card class="quiz-card" *ngFor="let data of host_data; let i = index">
+    <mat-card-content *ngFor="let quiz of data.quiz">
+      <span id="quiz_name">{{quiz.quiz_name}}</span>
+      <span id="host_name">{{data.host_name}}</span>
+      <span id="quiz_game_pin">{{quiz.game_pin}}</span>
+    </mat-card-content>
+    <mat-card-actions class="quiz-card-actions">
+      <button class="view-quiz-button" (click)="viewQuizQuestions(i)" matTooltip="View Quiz Questions">
+        <i class="far fa-eye fa-1g"></i>
+      </button>
+      <button class="start-quiz-button" (click)="startQuiz(i)" matTooltip="Start Quiz">
+        <i class="fas fa-play fa-1g"></i>
+      </button>
+      <button class="delete-quiz-button" matTooltip="Delete Quiz" (click)="deleteQuiz(i)">
+        <i class="fa fa-trash" aria-hidden="true" fa-1g></i>
+      </button>
+    </mat-card-actions>
+  </mat-card> -->

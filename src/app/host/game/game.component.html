@@ -1,0 +1,64 @@
+<head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+</head>
+
+<!-- <div class="game-container" *ngIf="gameSetup"> -->
+    <!-- <mat-toolbar>
+        <mat-toolbar-row>
+            <button class="back-button" (click)="backToHostDashboard()">
+                <i class="fas fa-arrow-left fa-1g"></i>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar> -->
+    <!-- <mat-toolbar *ngFor="let data of gamePlayData">
+        <mat-toolbar-row *ngFor="let quiz of data.quiz" class="game-pin-host-name">
+            <h1>
+                Game Pin: {{quiz.game_pin}}
+            </h1>
+        </mat-toolbar-row>
+        <mat-toolbar-row class="game-pin-host-name">
+            <span>Your Host: {{data.host_name}}</span>
+        </mat-toolbar-row>
+    </mat-toolbar> -->
+
+
+    <div class="game-details-container" >
+        <div class="game-details">
+            <div class="player-count">
+                <p>
+                    Player Count <br>
+                    {{playerCount}}
+                </p>
+                <p>
+                    Players:
+                </p>
+
+            </div>
+            
+            <div class="app-name">
+                <h1>
+                    Quiz Name
+                </h1>
+
+                <div>
+                    <h1>
+                        Game Pin: {{gamePin}}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gamers-names">
+            <div class="names" *ngFor="let gamer of gamers">
+                {{gamer}}
+            </div>
+        </div>
+        
+        <div class="page-actions">
+            <button class="page-action-button" (click)="backToHostDashboard()" mat-raised-button id="go-back">Back</button>
+            <button class="page-action-button" (click)="sendQuestion()" mat-raised-button id="start-game">Start Game</button>
+        </div>
+    </div>
+<!-- </div> -->
+
+<app-host-gameplay *ngIf="hostGameplay"></app-host-gameplay>

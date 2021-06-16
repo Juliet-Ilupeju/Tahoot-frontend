@@ -1,0 +1,35 @@
+.navigation{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: var(--white);
+}
+.navigation .logo {
+  font-family: 'Jockey One';
+  font-size: 2.2rem;
+  color: var(--blue);
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.1), -2px -2px 2px rgba(255,255,255,1);
+}
+
+.navigation .user-profile {
+  background-color: var(--white);
+  border-radius: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  color: var(--text);
+  border: 0;
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3), -2px -2px 5px 2px rgba(255,255,255,1);
+  /* box-shadow: 5px 9px 21px -1px rgba(0, 0, 0, 0.22), -10px -8px 25px -1px rgba(255, 255, 255, 0.91); */
+  transition: all .2s ease;
+}
+.navigation .user-profile:hover{
+  color: var(--blue);
+}
+.navigation .user-profile:active{
+  box-shadow: inset 4px 4px 1px 1px rgba(0,0,0,0.3), inset -1px -1px 2px 2px rgba(0, 0, 0, 0.3);
+}

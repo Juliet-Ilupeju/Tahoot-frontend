@@ -1,0 +1,21 @@
+<div class="bg-light p-3">
+  <app-item-toggler (onToggleChange)="onQuestionTypeChange($event)"></app-item-toggler>
+  <mat-form-field class="question-field w-100 mt-2" appearance="outline">
+    <mat-label>Question</mat-label>
+    <input matInput [(ngModel)]="questionText" (ngModelChange)="onQuestionTextValueChange($event)" type="text"
+      name="{{questionId}}" id="{{questionId}}" placeholder="Enter Question here" required>
+  </mat-form-field>
+  <mat-label *ngIf="questionText === ''" class="text-danger">Please enter Valid Question</mat-label>
+
+  <!-- question type image -->
+  <div *ngIf="questionType === 'image'" class=" file-upload-container d-flex align-items-end">
+    <div class="image-preview-container">
+      <img [src]="imageUrl" id="img-preview" class="question-image" />
+    </div>
+    <div class="file-upload-container">
+      <input style="display: none;" value="image url here" type="file" (change)="onFileSelected($event)" #fileInput id="image-upload" id="image-upload" name="image" />
+      <button class="btn-sm upload-button" name="image" (click)="fileInput.click()" mat-stroked-button color="primary">Upload
+        Image</button>
+    </div>
+  </div>
+</div>

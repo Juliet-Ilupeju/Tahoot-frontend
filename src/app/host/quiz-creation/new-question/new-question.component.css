@@ -1,0 +1,20 @@
+.image-preview-container {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #d8d7d7;
+}
+
+
+.question-image{
+	height:100px;
+	width:100px;
+}
+
+.file-upload-container {
+  overflow: hidden;
+	align-content: center;
+}
+
+.file-upload-container:hover {
+    cursor: pointer;
+}
